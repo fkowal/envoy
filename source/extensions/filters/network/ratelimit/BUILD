@@ -22,3 +22,17 @@ envoy_cc_library(
         "@envoy_api//envoy/config/filter/network/rate_limit/v2:rate_limit_cc",
     ],
 )
+
+envoy_cc_library(
+    name = "config",
+    srcs = ["config.cc"],
+    hdrs = ["config.h"],
+    deps = [
+        "//include/envoy/registry",
+        "//include/envoy/server:filter_config_interface",
+        "//source/common/config:filter_json_lib",
+        "//source/common/config:well_known_names",
+        "//source/common/protobuf:utility_lib",
+        "//source/extensions/filters/network/ratelimit:ratelimit_lib",
+    ],
+)

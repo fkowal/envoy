@@ -24,7 +24,7 @@ envoy_cc_test(
         "//source/server/config/http:grpc_web_lib",
         "//source/server/config/http:ip_tagging_lib",
         "//source/server/config/http:lua_lib",
-        "//source/server/config/http:ratelimit_lib",
+        #fixfix"//source/server/config/http:ratelimit_lib",
         "//source/server/config/http:router_lib",
         "//source/server/config/http:squash_lib",
         "//source/server/config/http:zipkin_lib",
